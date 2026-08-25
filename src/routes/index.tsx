@@ -47,23 +47,50 @@ export const Route = createFileRoute("/")({
 });
 
 const tagChips = [
-  { label: "Diagnose", icon: Search, tone: "bg-chip-1", pos: "left-0 top-2 sm:left-6" },
-  { label: "Fix", icon: Wrench, tone: "bg-chip-2", pos: "right-2 top-10 sm:right-16" },
-  { label: "Measure", icon: BarChart3, tone: "bg-chip-3", pos: "left-4 bottom-6 sm:left-20" },
+  {
+    label: "Diagnose",
+    icon: Search,
+    bg: "bg-chip-1/15",
+    fg: "text-chip-1",
+    pos: "left-0 top-2 sm:left-6",
+  },
+  {
+    label: "Fix",
+    icon: Wrench,
+    bg: "bg-chip-2/15",
+    fg: "text-chip-2",
+    pos: "right-2 top-10 sm:right-16",
+  },
+  {
+    label: "Measure",
+    icon: BarChart3,
+    bg: "bg-chip-3/15",
+    fg: "text-chip-3",
+    pos: "left-4 bottom-6 sm:left-20",
+  },
   {
     label: "Certified Experts",
     icon: BadgeCheck,
-    tone: "bg-chip-4",
+    bg: "bg-chip-4/15",
+    fg: "text-chip-4",
     pos: "right-0 bottom-2 sm:right-10",
   },
-  { label: "Real Measurement", icon: Activity, tone: "bg-chip-2", pos: "left-1/2 -top-2 -translate-x-1/2" },
+  {
+    label: "Real Measurement",
+    icon: Activity,
+    bg: "bg-chip-2/15",
+    fg: "text-chip-2",
+    pos: "left-1/2 -top-2 -translate-x-1/2",
+  },
   {
     label: "AI Visibility",
     icon: Eye,
-    tone: "bg-chip-1",
+    bg: "bg-chip-1/15",
+    fg: "text-chip-1",
     pos: "left-1/2 -bottom-4 -translate-x-1/2",
   },
 ];
+
 
 function Section({
   id,
