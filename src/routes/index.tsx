@@ -212,8 +212,8 @@ function Index() {
               className={`absolute ${chip.pos} hidden sm:block`}
             >
               <span className="flex items-center gap-2 rounded-full border border-border bg-card py-2 pl-2 pr-4 text-sm shadow-bezel">
-                <span className={`grid size-7 place-items-center rounded-full ${chip.tone}/15`}>
-                  <chip.icon className={`size-3.5 ${chip.tone.replace("bg-", "text-")}`} />
+                <span className={`grid size-7 place-items-center rounded-full ${chip.bg}`}>
+                  <chip.icon className={`size-3.5 ${chip.fg}`} />
                 </span>
                 {chip.label}
               </span>
@@ -225,8 +225,10 @@ function Index() {
                 key={chip.label}
                 className="flex items-center gap-2 rounded-full border border-border bg-card py-1.5 pl-1.5 pr-3 text-xs"
               >
-                <span className={`grid size-6 place-items-center rounded-full ${chip.tone}/15`}>
-                  <chip.icon className={`size-3 ${chip.tone.replace("bg-", "text-")}`} />
+                <span className={`grid size-6 place-items-center rounded-full ${chip.bg}`}>
+                  <chip.icon className={`size-3 ${chip.fg}`} />
+                </span>
+
                 </span>
                 {chip.label}
               </span>
