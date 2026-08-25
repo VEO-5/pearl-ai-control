@@ -12,7 +12,7 @@ import {
 
 import { AvatarCta } from "@/components/pearl/AvatarCta";
 import { Blobs } from "@/components/pearl/Blobs";
-import { DockNav } from "@/components/pearl/DockNav";
+import { TopNav } from "@/components/pearl/TopNav";
 import { LogoMarquee } from "@/components/pearl/Marquee";
 import { StepCard } from "@/components/pearl/StepCard";
 import {
@@ -110,7 +110,9 @@ function Section({
 
 function Index() {
   return (
-    <main className="relative overflow-x-hidden pb-32">
+    <>
+      <TopNav />
+      <main className="relative overflow-x-hidden pt-16">
       {/* HERO */}
       <section className="relative px-5 pt-24 pb-20 sm:px-8 sm:pt-32 sm:pb-28">
         <Blobs />
@@ -571,7 +573,7 @@ function Index() {
         </div>
       </footer>
 
-      <DockNav />
     </main>
+    </>
   );
 }
