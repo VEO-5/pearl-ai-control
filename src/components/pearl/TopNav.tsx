@@ -33,16 +33,18 @@ export function TopNav() {
     <header
       className={cn(
         "fixed inset-x-0 top-0 z-50 transition-colors duration-300",
-        scrolled
-          ? "bg-background/80 backdrop-blur-xl border-b border-border/40"
-          : "bg-background",
+        scrolled ? "bg-background/80 backdrop-blur-xl border-b border-border/40" : "bg-background",
       )}
     >
       <nav
         aria-label="Primary"
         className="mx-auto flex h-16 w-full max-w-7xl items-center justify-between gap-4 px-5 sm:px-8"
       >
-        <a href="#top" className="flex shrink-0 items-center gap-3 group" aria-label="Pearl 27 Home">
+        <a
+          href="#top"
+          className="flex shrink-0 items-center gap-3 group"
+          aria-label="Pearl 27 Home"
+        >
           <Pearl27Logo className="size-11 transition-transform duration-300 group-hover:scale-105" />
         </a>
 
@@ -94,4 +96,3 @@ export function TopNav() {
     </header>
   );
 }
-

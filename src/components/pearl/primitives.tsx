@@ -111,7 +111,11 @@ export function DotGrid({
   return (
     <div aria-hidden="true" className={cn("flex flex-col gap-2", className)}>
       {Array.from({ length: rows }).map((_, r) => (
-        <div key={r} className="flex gap-2" style={triangular ? { paddingLeft: r * 10 } : undefined}>
+        <div
+          key={r}
+          className="flex gap-2"
+          style={triangular ? { paddingLeft: r * 10 } : undefined}
+        >
           {Array.from({ length: triangular ? Math.max(1, cols - r) : cols }).map((__, c) => (
             <span key={c} className="size-1.5 rounded-full bg-dot/70" />
           ))}

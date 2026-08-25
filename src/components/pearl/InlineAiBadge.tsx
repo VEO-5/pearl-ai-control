@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
 
 export function InlineAiBadge({ className }: { className?: string }) {
-
   const engines = [
     {
       name: "ChatGPT",
@@ -17,7 +16,15 @@ export function InlineAiBadge({ className }: { className?: string }) {
       name: "Perplexity",
       bg: "bg-[#20808d]/10 text-[#20808d]",
       icon: (
-        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="size-6.5 sm:size-8">
+        <svg
+          viewBox="0 0 48 48"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth="2.5"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          className="size-6.5 sm:size-8"
+        >
           <path d="M24 4.5v39M13.73 16.573v-9.99L24 16.573m0 14.5L13.73 41.417V27.01L24 16.573m0 0l10.27-9.99v9.99" />
           <path d="M13.73 31.396H9.44V16.573h29.12v14.823h-4.29" />
           <path d="M24 16.573L34.27 27.01v14.407L24 31.073" />
@@ -29,26 +36,141 @@ export function InlineAiBadge({ className }: { className?: string }) {
       bg: "bg-[#3689FF]/10 text-[#3689FF]",
       icon: (
         <svg viewBox="0 0 296 298" fill="none" className="size-7 sm:size-8.5">
-          <mask id="gemini_hero_a" width="296" height="298" x="0" y="0" maskUnits="userSpaceOnUse" style={{ maskType: "alpha" }}>
-            <path fill="#3186FF" d="M141.201 4.886c2.282-6.17 11.042-6.071 13.184.148l5.985 17.37a184.004 184.004 0 0 0 111.257 113.049l19.304 6.997c6.143 2.227 6.156 10.91.02 13.155l-19.35 7.082a184.001 184.001 0 0 0-109.495 109.385l-7.573 20.629c-2.241 6.105-10.869 6.121-13.133.025l-7.908-21.296a184 184 0 0 0-109.02-108.658l-19.698-7.239c-6.102-2.243-6.118-10.867-.025-13.132l20.083-7.467A183.998 183.998 0 0 0 133.291 26.28l7.91-21.394Z"/>
+          <mask
+            id="gemini_hero_a"
+            width="296"
+            height="298"
+            x="0"
+            y="0"
+            maskUnits="userSpaceOnUse"
+            style={{ maskType: "alpha" }}
+          >
+            <path
+              fill="#3186FF"
+              d="M141.201 4.886c2.282-6.17 11.042-6.071 13.184.148l5.985 17.37a184.004 184.004 0 0 0 111.257 113.049l19.304 6.997c6.143 2.227 6.156 10.91.02 13.155l-19.35 7.082a184.001 184.001 0 0 0-109.495 109.385l-7.573 20.629c-2.241 6.105-10.869 6.121-13.133.025l-7.908-21.296a184 184 0 0 0-109.02-108.658l-19.698-7.239c-6.102-2.243-6.118-10.867-.025-13.132l20.083-7.467A183.998 183.998 0 0 0 133.291 26.28l7.91-21.394Z"
+            />
           </mask>
           <g mask="url(#gemini_hero_a)">
-            <g filter="url(#gemini_hero_b)"><ellipse cx="163" cy="149" fill="#3689FF" rx="196" ry="159"/></g>
-            <g filter="url(#gemini_hero_c)"><ellipse cx="33.5" cy="142.5" fill="#F6C013" rx="68.5" ry="72.5"/></g>
-            <g filter="url(#gemini_hero_d)"><ellipse cx="19.5" cy="148.5" fill="#F6C013" rx="68.5" ry="72.5"/></g>
-            <g filter="url(#gemini_hero_e)"><path fill="#FA4340" d="M194 10.5C172 82.5 65.5 134.333 22.5 135L144-66l50 76.5Z"/></g>
-            <g filter="url(#gemini_hero_f)"><path fill="#FA4340" d="M190.5-12.5C168.5 59.5 62 111.333 19 112L140.5-89l50 76.5Z"/></g>
-            <g filter="url(#gemini_hero_g)"><path fill="#14BB69" d="M194.5 279.5C172.5 207.5 66 155.667 23 155l121.5 201 50-76.5Z"/></g>
-            <g filter="url(#gemini_hero_h)"><path fill="#14BB69" d="M196.5 320.5C174.5 248.5 68 196.667 25 196l121.5 201 50-76.5Z"/></g>
+            <g filter="url(#gemini_hero_b)">
+              <ellipse cx="163" cy="149" fill="#3689FF" rx="196" ry="159" />
+            </g>
+            <g filter="url(#gemini_hero_c)">
+              <ellipse cx="33.5" cy="142.5" fill="#F6C013" rx="68.5" ry="72.5" />
+            </g>
+            <g filter="url(#gemini_hero_d)">
+              <ellipse cx="19.5" cy="148.5" fill="#F6C013" rx="68.5" ry="72.5" />
+            </g>
+            <g filter="url(#gemini_hero_e)">
+              <path fill="#FA4340" d="M194 10.5C172 82.5 65.5 134.333 22.5 135L144-66l50 76.5Z" />
+            </g>
+            <g filter="url(#gemini_hero_f)">
+              <path fill="#FA4340" d="M190.5-12.5C168.5 59.5 62 111.333 19 112L140.5-89l50 76.5Z" />
+            </g>
+            <g filter="url(#gemini_hero_g)">
+              <path
+                fill="#14BB69"
+                d="M194.5 279.5C172.5 207.5 66 155.667 23 155l121.5 201 50-76.5Z"
+              />
+            </g>
+            <g filter="url(#gemini_hero_h)">
+              <path
+                fill="#14BB69"
+                d="M196.5 320.5C174.5 248.5 68 196.667 25 196l121.5 201 50-76.5Z"
+              />
+            </g>
           </g>
           <defs>
-            <filter id="gemini_hero_b" width="464" height="390" x="-69" y="-46" colorInterpolationFilters="sRGB" filterUnits="userSpaceOnUse"><feFlood floodOpacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_69_17998" stdDeviation="18"/></filter>
-            <filter id="gemini_hero_c" width="265" height="273" x="-99" y="6" colorInterpolationFilters="sRGB" filterUnits="userSpaceOnUse"><feFlood floodOpacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_69_17998" stdDeviation="32"/></filter>
-            <filter id="gemini_hero_d" width="265" height="273" x="-113" y="12" colorInterpolationFilters="sRGB" filterUnits="userSpaceOnUse"><feFlood floodOpacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_69_17998" stdDeviation="32"/></filter>
-            <filter id="gemini_hero_e" width="299.5" height="329" x="-41.5" y="-130" colorInterpolationFilters="sRGB" filterUnits="userSpaceOnUse"><feFlood floodOpacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_69_17998" stdDeviation="32"/></filter>
-            <filter id="gemini_hero_f" width="299.5" height="329" x="-45" y="-153" colorInterpolationFilters="sRGB" filterUnits="userSpaceOnUse"><feFlood floodOpacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_69_17998" stdDeviation="32"/></filter>
-            <filter id="gemini_hero_g" width="299.5" height="329" x="-41" y="91" colorInterpolationFilters="sRGB" filterUnits="userSpaceOnUse"><feFlood floodOpacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_69_17998" stdDeviation="32"/></filter>
-            <filter id="gemini_hero_h" width="299.5" height="329" x="-39" y="132" colorInterpolationFilters="sRGB" filterUnits="userSpaceOnUse"><feFlood floodOpacity="0" result="BackgroundImageFix"/><feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape"/><feGaussianBlur result="effect1_foregroundBlur_69_17998" stdDeviation="32"/></filter>
+            <filter
+              id="gemini_hero_b"
+              width="464"
+              height="390"
+              x="-69"
+              y="-46"
+              colorInterpolationFilters="sRGB"
+              filterUnits="userSpaceOnUse"
+            >
+              <feFlood floodOpacity="0" result="BackgroundImageFix" />
+              <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+              <feGaussianBlur result="effect1_foregroundBlur_69_17998" stdDeviation="18" />
+            </filter>
+            <filter
+              id="gemini_hero_c"
+              width="265"
+              height="273"
+              x="-99"
+              y="6"
+              colorInterpolationFilters="sRGB"
+              filterUnits="userSpaceOnUse"
+            >
+              <feFlood floodOpacity="0" result="BackgroundImageFix" />
+              <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+              <feGaussianBlur result="effect1_foregroundBlur_69_17998" stdDeviation="32" />
+            </filter>
+            <filter
+              id="gemini_hero_d"
+              width="265"
+              height="273"
+              x="-113"
+              y="12"
+              colorInterpolationFilters="sRGB"
+              filterUnits="userSpaceOnUse"
+            >
+              <feFlood floodOpacity="0" result="BackgroundImageFix" />
+              <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+              <feGaussianBlur result="effect1_foregroundBlur_69_17998" stdDeviation="32" />
+            </filter>
+            <filter
+              id="gemini_hero_e"
+              width="299.5"
+              height="329"
+              x="-41.5"
+              y="-130"
+              colorInterpolationFilters="sRGB"
+              filterUnits="userSpaceOnUse"
+            >
+              <feFlood floodOpacity="0" result="BackgroundImageFix" />
+              <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+              <feGaussianBlur result="effect1_foregroundBlur_69_17998" stdDeviation="32" />
+            </filter>
+            <filter
+              id="gemini_hero_f"
+              width="299.5"
+              height="329"
+              x="-45"
+              y="-153"
+              colorInterpolationFilters="sRGB"
+              filterUnits="userSpaceOnUse"
+            >
+              <feFlood floodOpacity="0" result="BackgroundImageFix" />
+              <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+              <feGaussianBlur result="effect1_foregroundBlur_69_17998" stdDeviation="32" />
+            </filter>
+            <filter
+              id="gemini_hero_g"
+              width="299.5"
+              height="329"
+              x="-41"
+              y="91"
+              colorInterpolationFilters="sRGB"
+              filterUnits="userSpaceOnUse"
+            >
+              <feFlood floodOpacity="0" result="BackgroundImageFix" />
+              <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+              <feGaussianBlur result="effect1_foregroundBlur_69_17998" stdDeviation="32" />
+            </filter>
+            <filter
+              id="gemini_hero_h"
+              width="299.5"
+              height="329"
+              x="-39"
+              y="132"
+              colorInterpolationFilters="sRGB"
+              filterUnits="userSpaceOnUse"
+            >
+              <feFlood floodOpacity="0" result="BackgroundImageFix" />
+              <feBlend in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+              <feGaussianBlur result="effect1_foregroundBlur_69_17998" stdDeviation="32" />
+            </filter>
           </defs>
         </svg>
       ),
@@ -89,14 +211,14 @@ export function InlineAiBadge({ className }: { className?: string }) {
     <span
       className={cn(
         "inline-flex items-center justify-center align-middle mx-1.5 sm:mx-2 -translate-y-1 relative size-11 sm:size-14 rounded-2xl bg-white/90 border border-white shadow-[0_8px_25px_rgba(0,0,0,0.12)] backdrop-blur-md ring-1 ring-black/5 overflow-hidden transition-all duration-300",
-        className
+        className,
       )}
     >
       <div
         onTransitionEnd={handleTransitionEnd}
         className={cn(
           "w-full h-full flex flex-col",
-          isAnimated && "transition-transform duration-600 ease-[cubic-bezier(0.16,1,0.3,1)]"
+          isAnimated && "transition-transform duration-600 ease-[cubic-bezier(0.16,1,0.3,1)]",
         )}
         style={{ transform: `translateY(-${activeIndex * 100}%)` }}
       >

@@ -73,9 +73,7 @@ export function FaqSection() {
                   <h3 className="mt-8 font-display text-2xl font-semibold leading-snug text-slate-900 sm:text-3xl">
                     Have more questions?
                   </h3>
-                  <p className="mt-2 text-base text-slate-600">
-                    Book a free discovery call
-                  </p>
+                  <p className="mt-2 text-base text-slate-600">Book a free discovery call</p>
                 </div>
 
                 <div className="mt-10">

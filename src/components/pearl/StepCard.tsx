@@ -49,11 +49,7 @@ export function StepCard({
             See process + details
           </button>
 
-          <div
-            id={panelId}
-            hidden={!open}
-            className="mt-4 space-y-2 border-l border-border pl-4"
-          >
+          <div id={panelId} hidden={!open} className="mt-4 space-y-2 border-l border-border pl-4">
             {details.map((d) => (
               <p key={d} className="text-sm text-soft">
                 {d}
