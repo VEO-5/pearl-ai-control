@@ -228,10 +228,9 @@ function Index() {
                 <span className={`grid size-6 place-items-center rounded-full ${chip.bg}`}>
                   <chip.icon className={`size-3 ${chip.fg}`} />
                 </span>
-
-                </span>
                 {chip.label}
               </span>
+
             ))}
           </div>
         </div>
