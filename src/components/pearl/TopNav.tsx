@@ -17,6 +17,12 @@ export function TopNav() {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
+    // Always enforce light mode
+    document.documentElement.classList.remove("dark");
+    localStorage.setItem("pearl27-theme", "light");
+  }, []);
+
+  useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 8);
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
@@ -28,7 +34,7 @@ export function TopNav() {
       className={cn(
         "fixed inset-x-0 top-0 z-50 transition-colors duration-300",
         scrolled
-          ? "bg-background/80 backdrop-blur-xl"
+          ? "bg-background/80 backdrop-blur-xl border-b border-border/40"
           : "bg-background",
       )}
     >
@@ -53,7 +59,7 @@ export function TopNav() {
           ))}
         </ul>
 
-        <div className="flex shrink-0 items-center gap-1.5">
+        <div className="flex shrink-0 items-center gap-2">
           <AvatarCta size="sm" className="hidden sm:inline-flex" />
           <button
             type="button"
@@ -88,3 +94,4 @@ export function TopNav() {
     </header>
   );
 }
+

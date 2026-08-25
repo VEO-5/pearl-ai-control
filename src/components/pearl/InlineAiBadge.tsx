@@ -100,15 +100,17 @@ export function InlineAiBadge({ className }: { className?: string }) {
         )}
         style={{ transform: `translateY(-${activeIndex * 100}%)` }}
       >
-        {items.map((e, idx) => (
-          <div
-            key={`${e.name}-${idx}`}
-            className={cn("w-full h-full shrink-0 grid place-items-center rounded-2xl", e.bg)}
-            title={e.name}
-          >
-            {e.icon}
-          </div>
-        ))}
+        {items.map((e, idx) =>
+          e ? (
+            <div
+              key={`${e.name}-${idx}`}
+              className={cn("w-full h-full shrink-0 grid place-items-center rounded-2xl", e.bg)}
+              title={e.name}
+            >
+              {e.icon}
+            </div>
+          ) : null,
+        )}
       </div>
     </span>
   );
