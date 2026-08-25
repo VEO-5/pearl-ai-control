@@ -20,7 +20,7 @@
   --radius-4xl: calc(var(--radius) + 16px);
 
   --font-display: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Inter Display", "Inter Display Placeholder", sans-serif;
   --font-mono: "JetBrains Mono", ui-monospace, monospace;
 
   --color-background: var(--background);
@@ -73,31 +73,38 @@
 :root {
   --radius: 1rem;
 
-  --background: oklch(0.968 0 0);
-  --foreground: oklch(0.16 0 0);
-  --shell: oklch(0.945 0 0);
-  --shell-foreground: oklch(0.16 0 0);
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.16 0 0);
-  --inset: oklch(0.955 0 0);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.16 0 0);
+  /* Base: slightly lighter gray */
+  --background: oklch(0.905 0 0);
+  --foreground: oklch(0.13 0 0);
+  /* Shell: bezel outer frame — slightly darker than bg */
+  --shell: oklch(0.87 0 0);
+  --shell-foreground: oklch(0.13 0 0);
+  /* Card: lifted surface — meaningfully lighter than bg */
+  --card: oklch(0.99 0 0);
+  --card-foreground: oklch(0.13 0 0);
+  /* Inset: recessed surface — a touch darker than bg */
+  --inset: oklch(0.93 0 0);
+  --popover: oklch(0.99 0 0);
+  --popover-foreground: oklch(0.13 0 0);
 
+  /* Primary stays near-black for max contrast on gray */
   --primary: oklch(0.14 0 0);
   --primary-foreground: oklch(0.99 0 0);
-  --secondary: oklch(0.945 0 0);
-  --secondary-foreground: oklch(0.16 0 0);
-  --muted: oklch(0.95 0 0);
-  --muted-foreground: oklch(0.53 0 0);
-  --accent: oklch(0.925 0 0);
-  --accent-foreground: oklch(0.16 0 0);
+  --secondary: oklch(0.836 0 0);
+  --secondary-foreground: oklch(0.13 0 0);
+  --muted: oklch(0.846 0 0);
+  /* Muted text darkened for readability on gray bg */
+  --muted-foreground: oklch(0.42 0 0);
+  --accent: oklch(0.816 0 0);
+  --accent-foreground: oklch(0.13 0 0);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.99 0 0);
 
-  --border: oklch(0.9 0 0);
-  --input: oklch(0.9 0 0);
-  --ring: oklch(0.45 0 0);
-  --dot: oklch(0.76 0 0);
+  /* Border & dot darker so they read on gray */
+  --border: oklch(0.82 0 0);
+  --input: oklch(0.82 0 0);
+  --ring: oklch(0.42 0 0);
+  --dot: oklch(0.7 0 0);
 
   --blob-1: oklch(0.85 0.11 255);
   --blob-2: oklch(0.89 0.1 175);
@@ -112,14 +119,14 @@
   --chip-3: oklch(0.6 0.14 305);
   --chip-4: oklch(0.66 0.13 45);
 
-  --sidebar: oklch(0.945 0 0);
-  --sidebar-foreground: oklch(0.16 0 0);
+  --sidebar: oklch(0.836 0 0);
+  --sidebar-foreground: oklch(0.13 0 0);
   --sidebar-primary: oklch(0.14 0 0);
   --sidebar-primary-foreground: oklch(0.99 0 0);
-  --sidebar-accent: oklch(0.955 0 0);
-  --sidebar-accent-foreground: oklch(0.16 0 0);
-  --sidebar-border: oklch(0.9 0 0);
-  --sidebar-ring: oklch(0.45 0 0);
+  --sidebar-accent: oklch(0.856 0 0);
+  --sidebar-accent-foreground: oklch(0.13 0 0);
+  --sidebar-border: oklch(0.82 0 0);
+  --sidebar-ring: oklch(0.42 0 0);
 }
 
 .dark {
@@ -194,7 +201,7 @@
   h3,
   h4 {
     font-family: var(--font-display);
-    letter-spacing: -0.025em;
+    letter-spacing: -0.035em;
   }
 
   :focus-visible {

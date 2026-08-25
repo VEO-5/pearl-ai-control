@@ -1,15 +1,13 @@
 import { cn } from "@/lib/utils";
 
 export function AvatarCta({
-  label = "Book an audit",
-  sublabel = "15-min call, no deck",
+  label = "Book a call",
   href = "#book",
   className,
   size = "md",
   onDark = false,
 }: {
   label?: string;
-  sublabel?: string;
   href?: string;
   className?: string;
   size?: "sm" | "md";
@@ -19,39 +17,15 @@ export function AvatarCta({
     <a
       href={href}
       className={cn(
-        "group inline-flex items-center gap-3 rounded-full transition-transform duration-300 hover:-translate-y-0.5",
+        "group inline-flex items-center justify-center rounded-full font-display font-bold transition-all duration-300 hover:-translate-y-1 active:translate-y-0",
         onDark
-          ? "bg-ink-foreground text-ink shadow-bezel"
-          : "bg-primary text-primary-foreground shadow-bezel",
-        size === "md" ? "py-2 pl-2 pr-6" : "py-1.5 pl-1.5 pr-5",
+          ? "bg-white text-slate-950 shadow-[0_10px_30px_-4px_rgba(0,0,0,0.3),0_4px_12px_rgba(0,0,0,0.15)] hover:shadow-[0_18px_42px_-6px_rgba(255,255,255,0.25),0_8px_20px_rgba(0,0,0,0.2)]"
+          : "bg-slate-900 text-white shadow-[0_10px_28px_-4px_rgba(15,23,42,0.35),0_4px_10px_rgba(15,23,42,0.15)] hover:shadow-[0_18px_40px_-6px_rgba(15,23,42,0.45),0_8px_18px_rgba(15,23,42,0.2)] dark:bg-white dark:text-slate-900 dark:shadow-[0_10px_28px_-4px_rgba(255,255,255,0.2)] dark:hover:shadow-[0_18px_40px_-6px_rgba(255,255,255,0.3)]",
+        size === "md" ? "px-7 py-3 text-[0.95rem]" : "px-5 py-2.5 text-sm",
         className,
       )}
     >
-      <span
-        className={cn(
-          "grid shrink-0 place-items-center rounded-full font-mono text-[0.625rem] tracking-widest",
-          onDark ? "bg-ink text-ink-foreground" : "bg-accent text-accent-foreground",
-          size === "md" ? "size-10" : "size-8",
-        )}
-        aria-hidden="true"
-      >
-        P27
-      </span>
-      <span className="flex min-w-0 flex-col items-start leading-tight">
-        <span className={cn("font-display font-bold", size === "md" ? "text-[0.95rem]" : "text-sm")}>
-          {label}
-        </span>
-        {sublabel ? (
-          <span
-            className={cn(
-              "text-[0.7rem]",
-              onDark ? "text-ink/60" : "text-primary-foreground/60",
-            )}
-          >
-            {sublabel}
-          </span>
-        ) : null}
-      </span>
+      {label}
     </a>
   );
 }
