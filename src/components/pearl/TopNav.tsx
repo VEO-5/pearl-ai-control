@@ -16,6 +16,14 @@ const links = [
 export function TopNav() {
   const [scrolled, setScrolled] = useState(false);
   const [open, setOpen] = useState(false);
+  const [showBanner, setShowBanner] = useState(
+    () => localStorage.getItem("pearl27-banner-dismissed") !== "true",
+  );
+
+  const dismissBanner = () => {
+    setShowBanner(false);
+    localStorage.setItem("pearl27-banner-dismissed", "true");
+  };
 
   useEffect(() => {
     // Always enforce light mode
@@ -37,6 +45,20 @@ export function TopNav() {
         scrolled ? "bg-background/80 backdrop-blur-xl" : "bg-background",
       )}
     >
+      {showBanner && (
+        <div className="bg-gradient-to-r from-slate-900 via-slate-800 to-slate-900 px-5 py-2 text-center">
+          <p className="text-xs text-white/80">
+            ✨ New experiences and smooth navigation are coming soon. Stay tuned.
+            <button
+              onClick={dismissBanner}
+              className="ml-3 text-white/50 hover:text-white/80 transition-colors"
+              aria-label="Dismiss"
+            >
+              ×
+            </button>
+          </p>
+        </div>
+      )}
       <nav
         aria-label="Primary"
         className="mx-auto flex h-16 w-full max-w-7xl items-center justify-between gap-4 px-5 sm:px-8"

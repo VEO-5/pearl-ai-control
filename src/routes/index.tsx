@@ -91,7 +91,7 @@ function Index() {
   return (
     <>
       <TopNav />
-      <main className="relative overflow-x-hidden pt-16">
+      <main className="relative overflow-x-hidden pt-24">
         {/* HERO */}
         <section id="top" className="relative px-5 pt-24 pb-20 sm:px-8 sm:pt-32 sm:pb-28">
           <div className="relative mx-auto w-full max-w-6xl flex flex-col items-center text-center">
