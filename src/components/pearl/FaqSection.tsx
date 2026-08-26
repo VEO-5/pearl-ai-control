@@ -79,13 +79,15 @@ export function FaqSection() {
                 <div className="mt-10">
                   {/* Double Capsule Halo Button */}
                   <div className="rounded-full bg-white/60 p-1.5 border border-white/90 shadow-[0_12px_28px_rgba(0,0,0,0.12)]">
-                    <a
-                      href="#book"
+                    <button
+                      data-cal-namespace="booking"
+                      data-cal-link="emmanuel-eromosele-lvtqhz/15min"
+                      data-cal-config='{"layout":"month_view"}'
                       className="relative z-10 flex w-full cursor-pointer items-center justify-center gap-2.5 rounded-full bg-slate-950 py-3.5 px-6 text-sm font-medium text-white shadow-md transition-all duration-200 hover:bg-slate-800 hover:scale-[1.01] active:scale-[0.98]"
                     >
                       Book a Discovery Call
                       <ArrowRight className="size-4 text-white/80" />
-                    </a>
+                    </button>
                   </div>
 
                   <p className="mt-6 text-center text-xs text-slate-500">

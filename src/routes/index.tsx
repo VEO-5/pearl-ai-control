@@ -1,4 +1,6 @@
+import { useEffect } from "react";
 import { createFileRoute, Link } from "@tanstack/react-router";
+import { getCalApi } from "@calcom/embed-react";
 import {
   Activity,
   Award,
@@ -75,6 +77,17 @@ function Section({
 }
 
 function Index() {
+  useEffect(() => {
+    (async () => {
+      const cal = await getCalApi({ namespace: "booking" });
+      cal("ui", {
+        styles: { branding: { brandColor: "#0f172a" } },
+        hideEventTypeDetails: false,
+        layout: "month_view",
+      });
+    })();
+  }, []);
+
   return (
     <>
       <TopNav />
