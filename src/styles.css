@@ -248,7 +248,7 @@
   transform: none;
 }
 
-@utility marquee-track {
+.marquee-track {
   animation: pearl-marquee 34s linear infinite;
 }
 
@@ -270,9 +270,5 @@
     opacity: 1 !important;
     transform: none !important;
     transition: none !important;
-  }
-
-  .marquee-track {
-    animation: none !important;
   }
 }

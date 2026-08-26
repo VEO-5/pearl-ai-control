@@ -1,15 +1,16 @@
 import { useEffect, useState } from "react";
+import { Link } from "@tanstack/react-router";
 import { Menu, X } from "lucide-react";
 import { AvatarCta } from "./AvatarCta";
 import { Pearl27Logo } from "./Pearl27Logo";
 import { cn } from "@/lib/utils";
 
 const links = [
-  { href: "#how-it-works", label: "How it works" },
-  { href: "#services", label: "Services" },
-  { href: "#why", label: "Why Pearl 27" },
-  { href: "#proof", label: "Proof" },
-  { href: "#faq", label: "FAQ" },
+  { href: "/#how-it-works", label: "How it works" },
+  { href: "/#services", label: "Services" },
+  { href: "/#why", label: "Why Pearl 27" },
+  { href: "/#proof", label: "Proof" },
+  { href: "/#faq", label: "FAQ" },
 ];
 
 export function TopNav() {
@@ -33,20 +34,21 @@ export function TopNav() {
     <header
       className={cn(
         "fixed inset-x-0 top-0 z-50 transition-colors duration-300",
-        scrolled ? "bg-background/80 backdrop-blur-xl border-b border-border/40" : "bg-background",
+        scrolled ? "bg-background/80 backdrop-blur-xl" : "bg-background",
       )}
     >
       <nav
         aria-label="Primary"
         className="mx-auto flex h-16 w-full max-w-7xl items-center justify-between gap-4 px-5 sm:px-8"
       >
-        <a
-          href="#top"
+        <Link
+          to="/"
+          hash="top"
           className="flex shrink-0 items-center gap-3 group"
           aria-label="Pearl 27 Home"
         >
           <Pearl27Logo className="size-11 transition-transform duration-300 group-hover:scale-105" />
-        </a>
+        </Link>
 
         <ul className="hidden items-center gap-1 md:flex">
           {links.map((l) => (

@@ -1,4 +1,4 @@
-import { createFileRoute } from "@tanstack/react-router";
+import { createFileRoute, Link } from "@tanstack/react-router";
 import {
   Activity,
   Award,
@@ -80,7 +80,7 @@ function Index() {
       <TopNav />
       <main className="relative overflow-x-hidden pt-16">
         {/* HERO */}
-        <section className="relative px-5 pt-24 pb-20 sm:px-8 sm:pt-32 sm:pb-28">
+        <section id="top" className="relative px-5 pt-24 pb-20 sm:px-8 sm:pt-32 sm:pb-28">
           <div className="relative mx-auto w-full max-w-6xl flex flex-col items-center text-center">
             <Reveal>
               <Eyebrow>AI-era discoverability</Eyebrow>
@@ -180,7 +180,7 @@ function Index() {
               <Reveal delay={120} className="absolute left-[1%] top-[28%] z-20">
                 <div className="rounded-full bg-white/50 p-[5px] shadow-[0_16px_36px_rgba(0,0,0,0.14)] backdrop-blur-md border border-white/80 transition-all duration-300 hover:scale-105 hover:-translate-y-1 -rotate-6">
                   <div className="flex items-center gap-2.5 rounded-full bg-white py-1.5 pl-1.5 pr-4 shadow-sm">
-                    <span className="grid size-7.5 place-items-center rounded-full bg-[#E14D2A] text-white">
+                    <span className="grid size-7.5 place-items-center rounded-full bg-gradient-to-br from-[#38BDF8] via-[#0066A2] to-[#00426B] text-white shadow-[0_4px_12px_rgba(0,66,107,0.35)]">
                       <ScanSearch className="size-3.5" />
                     </span>
                     <span className="font-sans text-xs font-medium text-slate-900 tracking-tight">
@@ -194,7 +194,7 @@ function Index() {
               <Reveal delay={180} className="absolute left-[3%] top-[54%] z-20">
                 <div className="rounded-full bg-white/50 p-[5px] shadow-[0_16px_36px_rgba(0,0,0,0.14)] backdrop-blur-md border border-white/80 transition-all duration-300 hover:scale-105 hover:-translate-y-1 rotate-6">
                   <div className="flex items-center gap-2.5 rounded-full bg-white py-1.5 pl-1.5 pr-4 shadow-sm">
-                    <span className="grid size-7.5 place-items-center rounded-full bg-[#E14D2A] text-white">
+                    <span className="grid size-7.5 place-items-center rounded-full bg-gradient-to-br from-[#38BDF8] via-[#0066A2] to-[#00426B] text-white shadow-[0_4px_12px_rgba(0,66,107,0.35)]">
                       <Radar className="size-3.5" />
                     </span>
                     <span className="font-sans text-xs font-medium text-slate-900 tracking-tight">
@@ -208,7 +208,7 @@ function Index() {
               <Reveal delay={240} className="absolute left-[5%] top-[78%] z-20">
                 <div className="rounded-full bg-white/50 p-[5px] shadow-[0_16px_36px_rgba(0,0,0,0.14)] backdrop-blur-md border border-white/80 transition-all duration-300 hover:scale-105 hover:-translate-y-1 -rotate-5">
                   <div className="flex items-center gap-2.5 rounded-full bg-white py-1.5 pl-1.5 pr-4 shadow-sm">
-                    <span className="grid size-7.5 place-items-center rounded-full bg-[#E14D2A] text-white">
+                    <span className="grid size-7.5 place-items-center rounded-full bg-gradient-to-br from-[#38BDF8] via-[#0066A2] to-[#00426B] text-white shadow-[0_4px_12px_rgba(0,66,107,0.35)]">
                       <Gauge className="size-3.5" />
                     </span>
                     <span className="font-sans text-xs font-medium text-slate-900 tracking-tight">
@@ -222,7 +222,7 @@ function Index() {
               <Reveal delay={150} className="absolute right-[2%] top-[24%] z-20">
                 <div className="rounded-full bg-white/50 p-[5px] shadow-[0_16px_36px_rgba(0,0,0,0.14)] backdrop-blur-md border border-white/80 transition-all duration-300 hover:scale-105 hover:-translate-y-1 -rotate-6">
                   <div className="flex items-center gap-2.5 rounded-full bg-white py-1.5 pl-1.5 pr-4 shadow-sm">
-                    <span className="grid size-7.5 place-items-center rounded-full bg-[#E14D2A] text-white">
+                    <span className="grid size-7.5 place-items-center rounded-full bg-gradient-to-br from-[#38BDF8] via-[#0066A2] to-[#00426B] text-white shadow-[0_4px_12px_rgba(0,66,107,0.35)]">
                       <ShieldCheck className="size-3.5" />
                     </span>
                     <span className="font-sans text-xs font-medium text-slate-900 tracking-tight">
@@ -236,7 +236,7 @@ function Index() {
               <Reveal delay={210} className="absolute right-[0%] top-[50%] z-20">
                 <div className="rounded-full bg-white/50 p-[5px] shadow-[0_16px_36px_rgba(0,0,0,0.14)] backdrop-blur-md border border-white/80 transition-all duration-300 hover:scale-105 hover:-translate-y-1 -rotate-2">
                   <div className="flex items-center gap-2.5 rounded-full bg-white py-1.5 pl-1.5 pr-4 shadow-sm">
-                    <span className="grid size-7.5 place-items-center rounded-full bg-[#E14D2A] text-white">
+                    <span className="grid size-7.5 place-items-center rounded-full bg-gradient-to-br from-[#38BDF8] via-[#0066A2] to-[#00426B] text-white shadow-[0_4px_12px_rgba(0,66,107,0.35)]">
                       <Fingerprint className="size-3.5" />
                     </span>
                     <span className="font-sans text-xs font-medium text-slate-900 tracking-tight">
@@ -250,7 +250,7 @@ function Index() {
               <Reveal delay={270} className="absolute right-[3%] top-[74%] z-20">
                 <div className="rounded-full bg-white/50 p-[5px] shadow-[0_16px_36px_rgba(0,0,0,0.14)] backdrop-blur-md border border-white/80 transition-all duration-300 hover:scale-105 hover:-translate-y-1 -rotate-6">
                   <div className="flex items-center gap-2.5 rounded-full bg-white py-1.5 pl-1.5 pr-4 shadow-sm">
-                    <span className="grid size-7.5 place-items-center rounded-full bg-[#E14D2A] text-white">
+                    <span className="grid size-7.5 place-items-center rounded-full bg-gradient-to-br from-[#38BDF8] via-[#0066A2] to-[#00426B] text-white shadow-[0_4px_12px_rgba(0,66,107,0.35)]">
                       <Network className="size-3.5" />
                     </span>
                     <span className="font-sans text-xs font-medium text-slate-900 tracking-tight">
@@ -276,7 +276,7 @@ function Index() {
                   className={`rounded-full bg-white/50 p-[3.5px] border border-white/80 shadow-[0_8px_20px_rgba(0,0,0,0.1)] ${chip.rotate}`}
                 >
                   <span className="flex items-center gap-2 rounded-full bg-white py-1.5 pl-1.5 pr-3 text-[0.6875rem] font-medium text-slate-900">
-                    <span className="grid size-6 place-items-center rounded-full bg-[#E14D2A] text-white">
+                    <span className="grid size-6 place-items-center rounded-full bg-gradient-to-br from-[#38BDF8] via-[#0066A2] to-[#00426B] text-white shadow-[0_4px_12px_rgba(0,66,107,0.35)]">
                       <chip.icon className="size-3" />
                     </span>
                     {chip.label}
@@ -346,41 +346,90 @@ function Index() {
               Built as a system, <span className="font-medium text-soft">not a one-off audit.</span>
             </h2>
           </Reveal>
-          <div className="mt-12 grid gap-6 md:grid-cols-3">
+          <div className="mt-12 grid gap-8 sm:gap-10 lg:gap-12 md:grid-cols-3 max-w-5xl">
             {[
               {
                 n: "01",
                 title: "AI Visibility Audit",
                 body: "Full diagnostic across the major AI engines — what they say, what they miss, what they get wrong.",
-                icon: Search,
+                renderIcon: () => (
+                  <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" className="size-10 sm:size-12 transition-transform duration-300 group-hover:scale-105">
+                    <defs>
+                      <linearGradient id="audit-grad-1" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stopColor="#38BDF8" />
+                        <stop offset="60%" stopColor="#0066A2" />
+                        <stop offset="100%" stopColor="#00426B" />
+                      </linearGradient>
+                      <linearGradient id="audit-grad-glow" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stopColor="#7DD3FC" />
+                        <stop offset="100%" stopColor="#38BDF8" />
+                      </linearGradient>
+                    </defs>
+                    <rect width="48" height="48" rx="12" fill="#E0F2FE" />
+                    <circle cx="21" cy="21" r="11" fill="url(#audit-grad-1)" />
+                    <circle cx="21" cy="21" r="5.5" fill="#E0F2FE" />
+                    <circle cx="21" cy="21" r="2.5" fill="url(#audit-grad-glow)" />
+                    <rect x="28.5" y="27" width="13" height="5" rx="2.5" transform="rotate(45 28.5 27)" fill="url(#audit-grad-1)" />
+                  </svg>
+                ),
               },
               {
                 n: "02",
                 title: "Execution & Correction",
                 body: "Certified experts plus our Drummer network build accurate presence where models actually learn.",
-                icon: Wrench,
+                renderIcon: () => (
+                  <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" className="size-10 sm:size-12 transition-transform duration-300 group-hover:scale-105">
+                    <defs>
+                      <linearGradient id="fix-grad-1" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stopColor="#38BDF8" />
+                        <stop offset="50%" stopColor="#0066A2" />
+                        <stop offset="100%" stopColor="#00426B" />
+                      </linearGradient>
+                    </defs>
+                    <rect width="48" height="48" rx="12" fill="#E0F2FE" />
+                    <path d="M24 10L36 15V24C36 31.5 30.5 37.5 24 39.5C17.5 37.5 12 31.5 12 24V15L24 10Z" fill="url(#fix-grad-1)" />
+                    <path d="M19 24.5L22.5 28L29.5 20.5" stroke="white" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                ),
               },
               {
                 n: "03",
                 title: "Ongoing Monitoring",
                 body: "Continuous tracking and regular reports, so the change is visible instead of assumed.",
-                icon: BarChart3,
+                renderIcon: () => (
+                  <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" className="size-10 sm:size-12 transition-transform duration-300 group-hover:scale-105">
+                    <defs>
+                      <linearGradient id="measure-grad-1" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stopColor="#38BDF8" />
+                        <stop offset="60%" stopColor="#005B94" />
+                        <stop offset="100%" stopColor="#00426B" />
+                      </linearGradient>
+                      <linearGradient id="measure-grad-light" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" stopColor="#7DD3FC" />
+                        <stop offset="100%" stopColor="#38BDF8" />
+                      </linearGradient>
+                    </defs>
+                    <rect width="48" height="48" rx="12" fill="#E0F2FE" />
+                    <rect x="11" y="26" width="6" height="12" rx="3" fill="url(#measure-grad-1)" />
+                    <rect x="21" y="18" width="6" height="20" rx="3" fill="url(#measure-grad-light)" />
+                    <rect x="31" y="10" width="6" height="28" rx="3" fill="url(#measure-grad-1)" />
+                    <circle cx="34" cy="13" r="3.5" fill="#E0F2FE" />
+                  </svg>
+                ),
               },
             ].map((s, i) => (
               <Reveal key={s.n} delay={i * 90}>
-                <Bezel className="h-full">
-                  <div className="flex h-full flex-col">
-                    <span className="font-mono text-[0.6875rem] tracking-[0.18em] text-soft">
-                      {s.n}
-                    </span>
-                    <span className="mt-5 grid size-11 place-items-center rounded-xl bg-inset">
-                      <s.icon className="size-4" />
-                    </span>
-                    <h3 className="mt-5 text-xl font-semibold">{s.title}</h3>
-                    <p className="mt-3 flex-1 text-sm text-soft">{s.body}</p>
-                    <DotGrid rows={2} cols={6} className="mt-7 opacity-70" />
+                <div className="group flex flex-col items-start text-left">
+                  <div className="mb-1">
+                    <s.renderIcon />
                   </div>
-                </Bezel>
+                  <h3 className="mt-3 text-xl font-semibold leading-snug text-foreground sm:text-2xl font-display">
+                    {s.title}
+                  </h3>
+                  <p className="mt-2.5 text-sm sm:text-[0.95rem] text-soft leading-relaxed">
+                    {s.body}
+                  </p>
+                </div>
               </Reveal>
             ))}
           </div>
@@ -533,52 +582,75 @@ function Index() {
         <FaqSection />
 
         {/* FINAL CTA */}
-        <section id="book" className="relative overflow-hidden bg-ink px-5 py-24 sm:px-8 sm:py-32">
-          <Blobs className="opacity-40" />
-          <div className="relative mx-auto flex w-full max-w-4xl flex-col items-center text-center">
-            <Reveal>
-              <p className="flex items-center justify-center gap-2.5 font-mono text-[0.6875rem] uppercase tracking-[0.22em] text-ink-muted">
-                Book an audit
-              </p>
-            </Reveal>
-            <Reveal delay={80}>
-              <h2 className="mt-6 font-display text-3xl font-semibold leading-[1.1] text-ink-foreground sm:text-5xl">
-                Your brand already has a signal.{" "}
-                <span className="font-medium text-ink-muted">Let's find out what it's saying.</span>
-              </h2>
-            </Reveal>
-            <Reveal delay={160} className="mt-10">
-              <AvatarCta onDark />
-            </Reveal>
+        <section id="book" className="relative px-5 py-16 sm:px-8 sm:py-24">
+          <div className="relative mx-auto w-full max-w-7xl overflow-hidden rounded-[2rem] bg-ink px-6 py-24 shadow-dock sm:rounded-[3rem] sm:px-10 sm:py-32 lg:rounded-[3.5rem] lg:py-36">
+            <img
+              src="https://res.cloudinary.com/ura8eqf3/image/upload/f_auto,q_auto/gradience-Image_4"
+              alt=""
+              aria-hidden="true"
+              className="absolute inset-0 size-full object-cover"
+            />
+            <div className="absolute inset-0 bg-ink/50" />
+            <Blobs className="opacity-40" />
+            <div className="relative mx-auto flex w-full max-w-4xl flex-col items-center text-center">
+              <Reveal>
+                <p className="flex items-center justify-center gap-2.5 font-mono text-[0.6875rem] uppercase tracking-[0.22em] text-ink-foreground">
+                  Book an audit
+                </p>
+              </Reveal>
+              <Reveal delay={80}>
+                <h2 className="mt-6 font-display text-3xl font-semibold leading-[1.1] text-ink-foreground sm:text-5xl">
+                  Your brand already has a signal.{" "}
+                  <span className="font-medium text-ink-foreground/70">
+                    Let's find out what it's saying.
+                  </span>
+                </h2>
+              </Reveal>
+              <Reveal delay={160} className="mt-10">
+                <AvatarCta onDark />
+              </Reveal>
+            </div>
           </div>
         </section>
 
         {/* FOOTER */}
-        <footer className="relative overflow-hidden border-t border-border/40 px-5 pt-16 pb-8 sm:px-8">
+        <footer className="relative overflow-hidden bg-background px-6 pt-12 pb-6 sm:px-10 sm:pt-16 sm:pb-8">
           <div className="mx-auto w-full max-w-7xl">
-            {/* Top Row: Logo & Tagline */}
-            <div className="flex flex-col items-center justify-center gap-4 text-center sm:flex-row sm:justify-between sm:text-left">
-              <a href="#top" className="inline-block" aria-label="Pearl 27 Home">
-                <Pearl27Logo className="size-12" />
-              </a>
-              <p className="text-sm leading-relaxed text-soft">
-                AI-era discoverability for brands that want a say in the answer.
-              </p>
-            </div>
-
-            {/* Giant Display Wordmark matching reference screenshot */}
-            <div className="my-8 text-center select-none sm:my-14">
-              <span className="block font-serif text-[21vw] font-normal leading-none tracking-tight text-foreground/15 sm:text-[19vw]">
-                pearl 27
-              </span>
-            </div>
-
-            {/* Bottom Line & Copyright Bar */}
-            <div className="flex flex-col items-center justify-between gap-3 border-t border-border/50 pt-6 text-xs text-soft sm:flex-row">
-              <div>
-                © 2026 Copyright — Pearl 27 <span className="mx-2 text-border">|</span> Lehi, Utah
+            {/* Top Navigation Bar */}
+            <div className="flex flex-col items-start justify-between gap-6 sm:flex-row sm:items-center">
+              {/* Left: Logo & Meta Info */}
+              <div className="flex flex-wrap items-center gap-3">
+                <a href="#top" className="flex items-center gap-3 group" aria-label="Pearl 27 Home">
+                  <Pearl27Logo className="size-8 transition-transform duration-300 group-hover:scale-105" />
+                  <span className="font-display font-semibold text-foreground text-base tracking-tight">pearl 27</span>
+                </a>
+                <span className="text-xs text-soft">· © 2026 Lehi, Utah</span>
               </div>
-              <div className="text-soft/70">Engineered for AI Answer Engines</div>
+
+              {/* Right: Social & Legal Links */}
+              <nav aria-label="Footer navigation" className="flex flex-wrap items-center gap-x-6 gap-y-2 text-xs text-soft font-medium">
+                <a
+                  href="https://www.linkedin.com/company/pearl27/posts/?feedView=all"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="transition-colors hover:text-foreground"
+                >
+                  LinkedIn
+                </a>
+                <Link to="/privacy" className="transition-colors hover:text-foreground">
+                  Privacy Policy
+                </Link>
+                <Link to="/terms" className="transition-colors hover:text-foreground">
+                  Terms of Service
+                </Link>
+              </nav>
+            </div>
+
+            {/* Giant Display Wordmark with Top-to-Bottom Gradient Effect */}
+            <div className="relative mt-12 text-center select-none sm:mt-16">
+              <span className="block font-serif text-[22vw] sm:text-[20vw] font-normal leading-none tracking-tight uppercase text-transparent bg-clip-text bg-gradient-to-b from-stone-600/75 via-stone-400/35 to-transparent">
+                PEARL <span className="inline-block text-[1.12em]">27</span>
+              </span>
             </div>
           </div>
         </footer>

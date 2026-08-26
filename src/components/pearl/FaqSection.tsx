@@ -92,7 +92,7 @@ export function FaqSection() {
                     Or, email us at{" "}
                     <a
                       href="mailto:contact@pearl27.com"
-                      className="font-medium text-[#E14D2A] underline underline-offset-4 hover:opacity-80 transition-opacity"
+                      className="font-medium text-[#00426B] underline underline-offset-4 hover:opacity-80 transition-opacity"
                     >
                       contact@pearl27.com
                     </a>
@@ -118,7 +118,7 @@ export function FaqSection() {
                       <span className="font-sans text-base sm:text-lg font-medium text-foreground leading-snug">
                         {faq.question}
                       </span>
-                      <span className="grid size-7 shrink-0 place-items-center rounded-full text-[#E14D2A] transition-transform duration-300">
+                      <span className="grid size-7 shrink-0 place-items-center rounded-full text-[#00426B] transition-transform duration-300">
                         {isOpen ? (
                           <Minus className="size-5 stroke-[2.5]" />
                         ) : (
